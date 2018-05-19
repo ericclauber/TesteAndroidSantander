@@ -11,7 +11,7 @@ import com.example.eric.testeandroidsantander.webservices.contato.Cells
 /**
  * Created by eric on 19/05/18.
  */
-class ContatoInteractorImpl : ContatoInteracor {
+class ContatoInteractorImpl : ContatoInteractor {
 
     override fun getCells(context: Context, onContactListener: OnContactListener) {
 
@@ -30,7 +30,7 @@ class ContatoInteractorImpl : ContatoInteracor {
     }
 }
 
-interface ContatoInteracor {
+interface ContatoInteractor {
 
     fun getCells(context: Context, onContactListener: OnContactListener)
 }
