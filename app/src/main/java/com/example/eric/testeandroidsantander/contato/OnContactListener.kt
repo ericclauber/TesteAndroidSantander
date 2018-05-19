@@ -8,5 +8,5 @@ import com.example.eric.testeandroidsantander.webservices.contato.Cells
 interface OnContactListener {
 
     fun getCellsSuccess(cells: MutableList<Cells>)
-    fun getCellsError(error : String)
+    fun getCellsError(error : String?)
 }
