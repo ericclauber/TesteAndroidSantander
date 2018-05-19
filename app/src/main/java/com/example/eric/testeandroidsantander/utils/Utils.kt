@@ -1,8 +1,6 @@
 package com.example.eric.testeandroidsantander.utils
 
-import com.example.eric.testeandroidsantander.webservices.contato.Cells
 import com.google.gson.Gson
-import org.json.JSONArray
 import org.json.JSONException
 import org.json.JSONObject
 
@@ -11,22 +9,22 @@ import org.json.JSONObject
  */
 object Utils {
 
-    fun parseJsonFromString(jsonString: String, param: String): MutableList<Any> {
+    fun parseJsonFromString(jsonString: String, param: String, clazz: Class<*>): MutableList<Any> {
 
         val list: MutableList<Any> = ArrayList()
 
         try {
-
             val jsonObject = JSONObject(jsonString)
             val objectArray = jsonObject.getJSONArray(param)
             val gson = Gson()
 
             for (i in 0..objectArray.length()) {
 
-                val cell = gson.fromJson(i.toString(), Cells::class.java) as Cells
-                list.add(cell)
+                val any = gson.fromJson(objectArray.getString(i), clazz)
+                list.add(any)
             }
         } catch (e: JSONException) {
+
             e.printStackTrace()
         }
         return list

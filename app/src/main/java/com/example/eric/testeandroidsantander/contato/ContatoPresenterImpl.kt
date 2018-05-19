@@ -1,6 +1,7 @@
 package com.example.eric.testeandroidsantander.contato
 
 import android.content.Context
+import com.example.eric.testeandroidsantander.base.BaseActivity
 import com.example.eric.testeandroidsantander.base.BaseView
 import com.example.eric.testeandroidsantander.webservices.contato.Cells
 import kotlin.properties.Delegates
@@ -36,18 +37,20 @@ class ContatoPresenterImpl : ContatoPresenter, OnContactListener {
     }
 
     override fun getCellsSuccess(cells: MutableList<Cells>) {
-        context.run {
 
-            view.hideProgress()
+        (context as BaseActivity).runOnUiThread {
+
             view.getCellsSuccess(cells)
+            view.hideProgress()
         }
     }
 
     override fun getCellsError(error: String?) {
-        context.run {
 
-            view.hideProgress()
+        (context as BaseActivity).runOnUiThread {
+
             view.getCellsError(error)
+            view.hideProgress()
         }
     }
 }

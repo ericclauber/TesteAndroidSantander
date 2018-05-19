@@ -6,8 +6,9 @@ package com.example.eric.testeandroidsantander.webservices.contato
 data class Cells(var id: Integer,
                  var type: Integer,
                  var message: String,
-                 var typefield: Integer,
+                 var typefield: String,
                  var hidden: Boolean,
-                 var topSpacing: Boolean,
+                 var topSpacing: Double,
                  var show: Integer,
                  var required: Boolean)
+
