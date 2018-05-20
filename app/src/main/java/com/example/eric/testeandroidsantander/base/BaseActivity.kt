@@ -17,7 +17,7 @@ open class BaseActivity : AppCompatActivity() {
         supportFragmentManager
                 .beginTransaction()
                 .replace(R.id.content, fragment, fragment.javaClass.simpleName)
-                .setCustomAnimations(R.anim.abc_fade_in,R.anim.abc_fade_out)
+                .setCustomAnimations(R.anim.abc_fade_in, R.anim.abc_fade_out)
                 .addToBackStack(null)
                 .commit()
     }
@@ -38,5 +38,21 @@ open class BaseActivity : AppCompatActivity() {
     fun showToast(message: String?) {
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    fun configButtons(type: TypeButton) {
+
+        when (type) {
+
+            TypeButton.TYPE_CONTATO -> {
+                button_contato.setBackgroundColor(resources.getColor(R.color.colorButtonSelected, resources.newTheme()))
+                button_contato.height = button_contato.height + 4
+                button_investimento.setBackgroundColor(resources.getColor(R.color.colorButtonNormal, resources.newTheme()))
+            }
+            TypeButton.TYPE_INVESTIMENTO -> {
+                button_investimento.setBackgroundColor(resources.getColor(R.color.colorButtonSelected, resources.newTheme()))
+                button_contato.setBackgroundColor(resources.getColor(R.color.colorButtonNormal, resources.newTheme()))
+            }
+        }
     }
 }
