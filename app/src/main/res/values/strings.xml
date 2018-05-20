@@ -1,3 +1,4 @@
 <resources>
-
+    <string name="investimento_button">Investimento</string>
+    <string name="contato_button">Contato</string>
 </resources>
