@@ -1,48 +1,41 @@
 package com.example.eric.testeandroidsantander
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import android.view.View
 import com.example.eric.testeandroidsantander.base.BaseActivity
-import com.example.eric.testeandroidsantander.base.BaseView
-import com.example.eric.testeandroidsantander.contato.ContatoPresenterImpl
-import com.example.eric.testeandroidsantander.contato.ContatoView
-import com.example.eric.testeandroidsantander.webservices.contato.Cells
+import com.example.eric.testeandroidsantander.contato.ContatoFragment
+import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BaseActivity(), ContatoView {
-
-    var contatoPresenterImpl: ContatoPresenterImpl? = null
+class MainActivity : BaseActivity(), View.OnClickListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        contatoPresenterImpl = ContatoPresenterImpl(this, this)
-        contatoPresenterImpl?.getCells(this)
+        initUI()
     }
 
-    override fun showProgress(type: BaseView.ProgressType) {
+    fun initUI() {
 
+        button_contato.setOnClickListener(this)
+        button_contato.performClick()
+        button_investimento.setOnClickListener(this)
     }
 
-    override fun hideProgress() {
+    fun initData() {}
 
-    }
+    override fun onClick(v: View?) {
 
-    override fun onConnectionFailed() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+        when (v?.id) {
 
-    override fun getCellsSuccess(cells: MutableList<Cells>) {
+            R.id.button_investimento -> {
 
-        cells.forEach {
+            }
+            R.id.button_contato -> {
 
-            Log.d("TAG", "> > > > > > > > ${it.message}")
+                val fragmentContato = ContatoFragment.getInstance()
+                addFragment(fragmentContato)
+            }
         }
-    }
-
-    override fun getCellsError(error: String?) {
-
-        showToast(error)
     }
 }

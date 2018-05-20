@@ -18,7 +18,7 @@ object Utils {
             val objectArray = jsonObject.getJSONArray(param)
             val gson = Gson()
 
-            for (i in 0..objectArray.length()) {
+            for (i in 0..objectArray.length() - 1) {
 
                 val any = gson.fromJson(objectArray.getString(i), clazz)
                 list.add(any)
