@@ -6,6 +6,7 @@ import com.example.eric.testeandroidsantander.base.BaseActivity
 import com.example.eric.testeandroidsantander.base.TypeButton
 import com.example.eric.testeandroidsantander.contato.ContatoFragment
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_buttons_bottom.*
 
 class MainActivity : BaseActivity(), View.OnClickListener {
 
@@ -31,12 +32,34 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
             R.id.button_investimento -> {
 
+                configButtons(TypeButton.TYPE_INVESTIMENTO)
             }
             R.id.button_contato -> {
 
                 val fragmentContato = ContatoFragment.getInstance()
                 addFragment(fragmentContato)
                 configButtons(TypeButton.TYPE_CONTATO)
+            }
+        }
+    }
+
+    fun configButtons(type: TypeButton) {
+
+        when (type) {
+
+            TypeButton.TYPE_CONTATO -> {
+
+                button_contato.isActivated = true
+                button_investimento.isActivated = false
+                view_investimento.visibility = View.INVISIBLE
+                view_contato.visibility = View.VISIBLE
+            }
+            TypeButton.TYPE_INVESTIMENTO -> {
+
+                button_investimento.isActivated = true
+                button_contato.isActivated = false
+                view_contato.visibility = View.INVISIBLE
+                view_investimento.visibility = View.VISIBLE
             }
         }
     }

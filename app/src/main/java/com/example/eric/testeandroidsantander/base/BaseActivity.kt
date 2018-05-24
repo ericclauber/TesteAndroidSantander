@@ -3,9 +3,11 @@ package com.example.eric.testeandroidsantander.base
 import android.support.annotation.CallSuper
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
+import android.view.View
 import android.widget.Toast
 import com.example.eric.testeandroidsantander.R
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.layout_buttons_bottom.*
 
 /**
  * Created by eric on 19/05/18.
@@ -38,21 +40,5 @@ open class BaseActivity : AppCompatActivity() {
     fun showToast(message: String?) {
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
-    }
-
-    fun configButtons(type: TypeButton) {
-
-        when (type) {
-
-            TypeButton.TYPE_CONTATO -> {
-                button_contato.setBackgroundColor(resources.getColor(R.color.colorButtonSelected, resources.newTheme()))
-                button_contato.height = button_contato.height + 4
-                button_investimento.setBackgroundColor(resources.getColor(R.color.colorButtonNormal, resources.newTheme()))
-            }
-            TypeButton.TYPE_INVESTIMENTO -> {
-                button_investimento.setBackgroundColor(resources.getColor(R.color.colorButtonSelected, resources.newTheme()))
-                button_contato.setBackgroundColor(resources.getColor(R.color.colorButtonNormal, resources.newTheme()))
-            }
-        }
     }
 }

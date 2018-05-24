@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true">
+
+    <View
+        android:id="@+id/view_investimento"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorButtonSelected"
+        app:layout_constraintBottom_toTopOf="@+id/button_investimento"
+        app:layout_constraintEnd_toStartOf="@+id/view_contato"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button_investimento"
+        style="@style/Button"
+        android:text="@string/investimento_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button_contato"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view_contato"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:background="@color/colorButtonSelected"
+        app:layout_constraintBottom_toTopOf="@+id/button_contato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/view_investimento" />
+
+    <Button
+        android:id="@+id/button_contato"
+        style="@style/Button"
+        android:text="@string/contato_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/button_investimento" />
+
+</android.support.constraint.ConstraintLayout>
