@@ -1,4 +1,5 @@
 <resources>
     <string name="investimento_button">Investimento</string>
     <string name="contato_button">Contato</string>
+    <string name="texto_espere_progress_dialog">Aguarde...</string>
 </resources>

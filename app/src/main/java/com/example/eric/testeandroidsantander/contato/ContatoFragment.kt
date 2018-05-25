@@ -47,7 +47,7 @@ class ContatoFragment : Fragment(), ContatoView {
 
     fun initUI(){
 
-        var mActivity = (activity as MainActivity)
+        mActivity = (activity as MainActivity)
     }
 
     fun initData(){
@@ -58,10 +58,12 @@ class ContatoFragment : Fragment(), ContatoView {
 
     override fun showProgress(type: BaseView.ProgressType) {
 
+        mActivity?.onLoadingStart()
     }
 
     override fun hideProgress() {
 
+        mActivity?.onLoadingFinish()
     }
 
     override fun onConnectionFailed() {

@@ -9,4 +9,5 @@
     <color name="colorButtonNormal">#E00107</color>
     <color name="colorButtonSelected">#B50005</color>
     <color name="colorButtonPressed">#FB3B30</color>
+    <color name="colorBlack">#000000</color>
 </resources>
