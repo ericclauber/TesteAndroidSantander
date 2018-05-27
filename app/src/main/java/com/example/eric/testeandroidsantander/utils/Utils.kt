@@ -9,7 +9,7 @@ import org.json.JSONObject
  */
 object Utils {
 
-    fun parseJsonFromString(jsonString: String, param: String, clazz: Class<*>): MutableList<Any> {
+    fun parseJsonFromStringToList(jsonString: String, param: String, clazz: Class<*>): MutableList<Any> {
 
         val list: MutableList<Any> = ArrayList()
 
@@ -28,5 +28,23 @@ object Utils {
             e.printStackTrace()
         }
         return list
+    }
+
+    fun parseJsonFromString(jsonString: String, param: String, clazz: Class<*>): Any {
+
+        var any: Any? = null
+
+        try {
+            val jsonObject = JSONObject(jsonString)
+            val objectArray = jsonObject.getJSONArray(param)
+            val gson = Gson()
+
+            any = gson.fromJson(jsonObject.getString(param), clazz)
+
+        } catch (e: JSONException) {
+
+            e.printStackTrace()
+        }
+        return any!!
     }
 }

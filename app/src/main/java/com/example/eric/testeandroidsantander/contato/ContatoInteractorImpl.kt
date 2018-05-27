@@ -17,7 +17,7 @@ class ContatoInteractorImpl : ContatoInteractor {
 
         val stringRequest = StringRequest(Constants.URL_CELLS, Response.Listener<String> {
 
-            val cellsList = Utils.parseJsonFromString(it, "cells", Cells::class.java) as MutableList<Cells>
+            val cellsList = Utils.parseJsonFromStringToList(it, "cells", Cells::class.java) as MutableList<Cells>
             onContactListener.getCellsSuccess(cellsList)
         },
                 Response.ErrorListener {
