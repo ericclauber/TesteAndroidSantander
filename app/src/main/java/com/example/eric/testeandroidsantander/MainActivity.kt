@@ -3,9 +3,8 @@ package com.example.eric.testeandroidsantander
 import android.os.Bundle
 import android.view.View
 import com.example.eric.testeandroidsantander.base.BaseActivity
-import com.example.eric.testeandroidsantander.base.TypeButton
+import com.example.eric.testeandroidsantander.base.enumbase.TypeButton
 import com.example.eric.testeandroidsantander.contato.ContatoFragment
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_buttons_bottom.*
 
 class MainActivity : BaseActivity(), View.OnClickListener {

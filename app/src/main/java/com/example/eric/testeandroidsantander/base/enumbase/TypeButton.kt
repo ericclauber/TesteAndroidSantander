@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.base
+package com.example.eric.testeandroidsantander.base.enumbase
 
 /**
  * Created by eric on 20/05/18.
