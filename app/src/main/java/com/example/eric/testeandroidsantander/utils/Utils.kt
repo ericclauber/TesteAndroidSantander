@@ -30,17 +30,15 @@ object Utils {
         return list
     }
 
-    fun parseJsonFromString(jsonString: String, param: String, clazz: Class<*>): Any {
+    fun parseJsonFromStringToObject(jsonString: String, param: String, clazz: Class<*>): Any {
 
         var any: Any? = null
 
         try {
             val jsonObject = JSONObject(jsonString)
-            val objectArray = jsonObject.getJSONArray(param)
             val gson = Gson()
 
             any = gson.fromJson(jsonObject.getString(param), clazz)
-
         } catch (e: JSONException) {
 
             e.printStackTrace()

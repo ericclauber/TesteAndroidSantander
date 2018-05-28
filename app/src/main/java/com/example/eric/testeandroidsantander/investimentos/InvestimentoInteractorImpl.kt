@@ -16,7 +16,9 @@ class InvestimentoInteractorImpl : InvestimentoInteractor {
 
         val stringRequest = StringRequest(Constants.URL_FUND, Response.Listener<String> {
 
-            val screen = Utils.parseJsonFromString(it, "screen", Screen::class.java) as Screen
+            val screen = Utils.parseJsonFromStringToObject(it, "screen", Screen::class.java)
+                    as Screen
+
             onInvestimentoListener.getScreenSuccess(screen)
 
         }, Response.ErrorListener {

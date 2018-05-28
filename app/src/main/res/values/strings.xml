@@ -3,4 +3,5 @@
     <string name="contato_button">Contato</string>
     <string name="texto_espere_progress_dialog">Aguarde...</string>
     <string name="botao_enviar">Enviar</string>
+    <string name="url_error">Erro ao carregar dados. Tente novamente mais tarde</string>
 </resources>

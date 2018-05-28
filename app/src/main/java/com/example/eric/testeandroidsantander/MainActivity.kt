@@ -5,6 +5,7 @@ import android.view.View
 import com.example.eric.testeandroidsantander.base.BaseActivity
 import com.example.eric.testeandroidsantander.base.enumbase.TypeButton
 import com.example.eric.testeandroidsantander.contato.ContatoFragment
+import com.example.eric.testeandroidsantander.investimentos.InvestimentoFragment
 import kotlinx.android.synthetic.main.layout_buttons_bottom.*
 
 class MainActivity : BaseActivity(), View.OnClickListener {
@@ -31,6 +32,8 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
             R.id.button_investimento -> {
 
+                val fragmentInvestimento = InvestimentoFragment.getInstance()
+                addFragment(fragmentInvestimento)
                 configButtons(TypeButton.TYPE_INVESTIMENTO)
             }
             R.id.button_contato -> {
