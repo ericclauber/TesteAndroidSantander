@@ -17,4 +17,11 @@
     // General
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+
+    // Risk
+    <color name="colorGreenRisk1">#49D349</color>
+    <color name="colorGreenRisk2">#10A410</color>
+    <color name="colorYellowRisk3">#FFFF00</color>
+    <color name="colorOrangeRisk4">#FFAA00</color>
+    <color name="colorRedRisk5">@color/colorPrimary</color>
 </resources>
