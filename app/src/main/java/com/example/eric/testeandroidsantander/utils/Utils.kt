@@ -1,5 +1,6 @@
 package com.example.eric.testeandroidsantander.utils
 
+import android.content.Context
 import com.google.gson.Gson
 import org.json.JSONException
 import org.json.JSONObject
@@ -44,5 +45,11 @@ object Utils {
             e.printStackTrace()
         }
         return any!!
+    }
+
+    fun dpToPixel(context: Context, dp: Int): Int {
+
+        var density = context?.resources?.displayMetrics?.density
+        return dp * density!!.toInt()
     }
 }

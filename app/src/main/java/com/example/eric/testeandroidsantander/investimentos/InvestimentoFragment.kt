@@ -1,15 +1,19 @@
 package com.example.eric.testeandroidsantander.investimentos
 
+import android.graphics.Color
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import com.example.eric.testeandroidsantander.MainActivity
 import com.example.eric.testeandroidsantander.R
 import com.example.eric.testeandroidsantander.base.BaseView
 import com.example.eric.testeandroidsantander.webservices.investimentos.Screen
+import kotlinx.android.synthetic.main.fragmento_investimento.*
+import kotlinx.android.synthetic.main.linear_layout_risk.*
 import kotlin.properties.Delegates
 
 /**
@@ -46,6 +50,8 @@ class InvestimentoFragment : Fragment(), InvestimentoView {
     fun initUI() {
 
         mActivity = (activity as MainActivity)
+
+//        viewRisk4.layoutParams.height = dpToPixel(12)
     }
 
     fun initData() {
@@ -53,7 +59,6 @@ class InvestimentoFragment : Fragment(), InvestimentoView {
         investimentoPresenterImpl = InvestimentoPresenterImpl(context!!, this)
         investimentoPresenterImpl?.getScreen(context!!)
     }
-
 
     override fun showProgress(type: BaseView.ProgressType) {
 
@@ -70,11 +75,16 @@ class InvestimentoFragment : Fragment(), InvestimentoView {
     }
 
     override fun getInvestimentoSuccess(screen: Screen?) {
-       Log.d("TAG", "> > > > > > ${screen?.fundName}")
+
+        textViewTitle.text = screen?.title
+        textViewInvestimentName.text = screen?.fundName
+        textViewWhatIs.text = screen?.whatIs
+        textViewDefinition.text = screen?.definition
+        textViewRiskDegree.text = screen?.riskTitle
     }
 
     override fun getInvestimentoError(error: String?) {
 
-        mActivity?.showToast("${ getString(R.string.url_error)}\n$error")
+        mActivity?.showToast("${getString(R.string.url_error)}\n$error")
     }
 }

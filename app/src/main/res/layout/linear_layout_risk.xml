@@ -10,69 +10,58 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@color/colorBlack" />
+            android:id="@+id/imageViewArrowRisk1"
+            style="@style/ImageViewArrowRisk"
+            android:src="@drawable/baseline_keyboard_arrow_down_black_24" />
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@color/colorAccent" />
+            android:id="@+id/imageViewArrowRisk2"
+            style="@style/ImageViewArrowRisk" />
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@color/colorBlack" />
+            android:id="@+id/imageViewArrowRisk3"
+            style="@style/ImageViewArrowRisk"/>
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@color/colorAccent" />
+            android:id="@+id/imageViewArrowRisk4"
+            style="@style/ImageViewArrowRisk"/>
 
         <ImageView
-            android:layout_width="0dp"
-            android:layout_height="30dp"
-            android:layout_weight="1"
-            android:background="@color/colorBlack" />
+            android:id="@+id/imageViewArrowRisk5"
+            style="@style/ImageViewArrowRisk" />
+
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayoutRiskView"
         android:layout_width="match_parent"
-        android:layout_height="10dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/background_risk_1"/>
+            android:id="@+id/viewRisk1"
+            style="@style/ViewRisk"
+            android:background="@drawable/background_risk_1" />
 
         <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/background_risk_2"/>
+            android:id="@+id/viewRisk2"
+            style="@style/ViewRisk"
+            android:background="@drawable/background_risk_2" />
 
         <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/background_risk_3"/>
+            android:id="@+id/viewRisk3"
+            style="@style/ViewRisk"
+            android:background="@drawable/background_risk_3" />
 
         <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/background_risk_4"/>
+            android:id="@+id/viewRisk4"
+            style="@style/ViewRisk"
+            android:background="@drawable/background_risk_4" />
+
         <View
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/background_risk_5"/>
+            android:id="@+id/viewRisk5"
+            style="@style/ViewRisk"
+            android:background="@drawable/background_risk_5" />
     </LinearLayout>
 
 </LinearLayout>

@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/content"
-    style="@style/FragmentCustomStyle">
+    style="@style/FragmentCustomStyle"
+    android:layout_marginTop="24dp">
 
     <TextView
 
@@ -26,45 +27,47 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-
-
-        android:id="@+id/textViewFundoInvestimento"
+        android:id="@+id/textViewTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="12dp"
         android:gravity="center"
-        android:text="Fundos de investimento"
+        android:text="Fundos de..."
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewLabelInvestimento" />
 
     <TextView
-
-        android:id="@+id/textViewTituloInvestimento"
+        android:id="@+id/textViewInvestimentName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:textSize="28dp"
         android:gravity="center"
         android:text="Vince Valorem"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewFundoInvestimento" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
 
     <View
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
+        android:layout_marginTop="16dp"
         android:background="@color/textColorGray1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTituloInvestimento"></View>
+        app:layout_constraintTop_toBottomOf="@+id/textViewInvestimentName"></View>
 
     <TextView
 
-        android:id="@+id/textViewPergunta"
+        android:id="@+id/textViewWhatIs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="O que é?"
         android:textColor="@color/colorBlack"
@@ -75,8 +78,8 @@
 
     <TextView
 
-        android:id="@+id/textViewResposta"
-        android:layout_width="match_constraint"
+        android:id="@+id/textViewDefinition"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center"
@@ -85,29 +88,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPergunta" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewWhatIs" />
 
     <TextView
 
-        android:id="@+id/textViewGrauDeRisco"
-        android:layout_width="match_constraint"
+        android:id="@+id/textViewRiskDegree"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:text="Grau de risco"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewResposta" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewDefinition" />
 
     <include
         android:id="@+id/layout_risk"
         layout="@layout/linear_layout_risk"
+        android:layout_marginTop="16dp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewGrauDeRisco" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewRiskDegree" />
 
 </android.support.constraint.ConstraintLayout>
