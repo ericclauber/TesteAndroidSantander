@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
 
@@ -39,7 +39,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewLabelInvestimento" />
 
     <TextView
-            android:id="@+id/textViewInvestimentName"
+        android:id="@+id/textViewInvestimentName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center"
@@ -112,5 +112,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewRiskDegree" />
+
+    <TextView
+        android:id="@+id/textViewMoreInfoTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Mais informaçeõs..."
+        android:textColor="@color/textColorGray2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layout_risk" />
 
 </android.support.constraint.ConstraintLayout>
