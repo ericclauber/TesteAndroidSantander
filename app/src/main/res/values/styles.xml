@@ -60,4 +60,21 @@
         <item name="android:tint">@color/textColorGray2</item>
     </style>
 
+    <style name="TextViewMoreInfoLabels" parent="Theme.AppCompat">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textColor">@color/textColorGray2</item>
+    </style>
+
+    <style name="TextViewMoreInfoValues" parent="Theme.AppCompat">
+
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:gravity">right</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
 </resources>

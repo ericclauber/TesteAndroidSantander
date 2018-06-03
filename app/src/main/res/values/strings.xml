@@ -5,4 +5,11 @@
     <string name="button_send">Enviar</string>
     <string name="url_error">Erro ao carregar dados. Tente novamente mais tarde</string>
     <string name="button_invest_on_investment">Investir</string>
+    <string name="more_info_title_investiment">Mais informações sobre o investimento</string>
+    <string name="more_info_fund_title_investiment">Fundo</string>
+    <string name="more_info_cdi_title_investiment">CDI</string>
+    <string name="more_info_on_month_investiment">No mês</string>
+    <string name="more_info_on_year_investiment">No Ano</string>
+    <string name="more_info_on_twelve_months_investiment">12 meses</string>
+
 </resources>
