@@ -5,14 +5,14 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/linearLayoutRiskArrow"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/imageViewArrowRisk1"
-            style="@style/ImageViewArrowRisk"
-            android:src="@drawable/baseline_keyboard_arrow_down_black_24" />
+            style="@style/ImageViewArrowRisk" />
 
         <ImageView
             android:id="@+id/imageViewArrowRisk2"
@@ -20,11 +20,11 @@
 
         <ImageView
             android:id="@+id/imageViewArrowRisk3"
-            style="@style/ImageViewArrowRisk"/>
+            style="@style/ImageViewArrowRisk" />
 
         <ImageView
             android:id="@+id/imageViewArrowRisk4"
-            style="@style/ImageViewArrowRisk"/>
+            style="@style/ImageViewArrowRisk" />
 
         <ImageView
             android:id="@+id/imageViewArrowRisk5"
