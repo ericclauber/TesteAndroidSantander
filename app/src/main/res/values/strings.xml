@@ -1,7 +1,8 @@
 <resources>
-    <string name="investimento_button">Investimento</string>
-    <string name="contato_button">Contato</string>
-    <string name="texto_espere_progress_dialog">Aguarde...</string>
-    <string name="botao_enviar">Enviar</string>
+    <string name="investiment_button">Investimento</string>
+    <string name="contact_button">Contato</string>
+    <string name="text_wait_progress_dialog">Aguarde...</string>
+    <string name="button_send">Enviar</string>
     <string name="url_error">Erro ao carregar dados. Tente novamente mais tarde</string>
+    <string name="button_invest_on_investment">Investir</string>
 </resources>

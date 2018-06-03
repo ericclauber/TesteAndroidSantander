@@ -17,7 +17,7 @@
     <Button
         android:id="@+id/button_investimento"
         style="@style/Button"
-        android:text="@string/investimento_button"
+        android:text="@string/investiment_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_contato"
         app:layout_constraintStart_toStartOf="parent" />
@@ -34,7 +34,7 @@
     <Button
         android:id="@+id/button_contato"
         style="@style/Button"
-        android:text="@string/contato_button"
+        android:text="@string/contact_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_investimento" />

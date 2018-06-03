@@ -2,14 +2,10 @@ package com.example.eric.testeandroidsantander.base
 
 import android.app.AlertDialog
 import android.app.ProgressDialog
-import android.support.annotation.CallSuper
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
-import android.view.View
 import android.widget.Toast
 import com.example.eric.testeandroidsantander.R
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.layout_buttons_bottom.*
 
 /**
  * Created by eric on 19/05/18.
@@ -32,7 +28,7 @@ open class BaseActivity : AppCompatActivity() {
         onLoadingFinish()
 
         progressDialog = ProgressDialog(this@BaseActivity, AlertDialog.THEME_DEVICE_DEFAULT_LIGHT)
-        progressDialog!!.setMessage(getString(R.string.texto_espere_progress_dialog))
+        progressDialog!!.setMessage(getString(R.string.text_wait_progress_dialog))
         progressDialog!!.setCancelable(false)
 
         try {
