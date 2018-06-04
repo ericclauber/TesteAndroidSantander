@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import com.example.eric.testeandroidsantander.MainActivity
 import com.example.eric.testeandroidsantander.R
 import com.example.eric.testeandroidsantander.base.BaseView
-import com.example.eric.testeandroidsantander.webservices.contato.Cells
+import com.example.eric.testeandroidsantander.webservices.contact.Cells
 
 /**
  * Created by eric on 20/05/18.

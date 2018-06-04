@@ -3,7 +3,7 @@ package com.example.eric.testeandroidsantander.investimentos
 import android.content.Context
 import com.example.eric.testeandroidsantander.base.BaseActivity
 import com.example.eric.testeandroidsantander.base.BaseView
-import com.example.eric.testeandroidsantander.webservices.investimentos.Screen
+import com.example.eric.testeandroidsantander.webservices.investiments.Screen
 import kotlin.properties.Delegates
 
 /**

@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.webservices.investimentos.month
+package com.example.eric.testeandroidsantander.webservices.investiments.month
 
 import com.google.gson.annotations.SerializedName
 

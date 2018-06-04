@@ -3,7 +3,7 @@ package com.example.eric.testeandroidsantander.contato
 import android.content.Context
 import com.example.eric.testeandroidsantander.base.BaseActivity
 import com.example.eric.testeandroidsantander.base.BaseView
-import com.example.eric.testeandroidsantander.webservices.contato.Cells
+import com.example.eric.testeandroidsantander.webservices.contact.Cells
 import kotlin.properties.Delegates
 
 /**

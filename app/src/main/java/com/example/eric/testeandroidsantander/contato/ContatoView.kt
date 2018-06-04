@@ -1,7 +1,7 @@
 package com.example.eric.testeandroidsantander.contato
 
 import com.example.eric.testeandroidsantander.base.BaseView
-import com.example.eric.testeandroidsantander.webservices.contato.Cells
+import com.example.eric.testeandroidsantander.webservices.contact.Cells
 
 /**
  * Created by eric on 19/05/18.

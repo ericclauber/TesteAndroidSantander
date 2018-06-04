@@ -6,7 +6,7 @@ import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
 import com.example.eric.testeandroidsantander.utils.Utils
 import com.example.eric.testeandroidsantander.webservices.Constants
-import com.example.eric.testeandroidsantander.webservices.investimentos.Screen
+import com.example.eric.testeandroidsantander.webservices.investiments.Screen
 
 /**
  * Created by eric on 27/05/18.

@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.webservices.investimentos
+package com.example.eric.testeandroidsantander.webservices.investiments
 
 data class Screen(var title: String,
                   var fundName: String,

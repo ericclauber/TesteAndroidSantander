@@ -11,8 +11,8 @@ import com.example.eric.testeandroidsantander.R
 import com.example.eric.testeandroidsantander.base.BaseView
 import com.example.eric.testeandroidsantander.base.LineItem
 import com.example.eric.testeandroidsantander.investimentos.adapter.InvestmentAdapter
-import com.example.eric.testeandroidsantander.webservices.investimentos.MoreInfo
-import com.example.eric.testeandroidsantander.webservices.investimentos.Screen
+import com.example.eric.testeandroidsantander.webservices.investiments.HeaderScreen
+import com.example.eric.testeandroidsantander.webservices.investiments.Screen
 import kotlinx.android.synthetic.main.fragment_investimento.*
 
 /**
@@ -23,7 +23,7 @@ class InvestimentFragment : Fragment(), InvestimentoView, InvestmentAdapter.OnCl
     var investimentoPresenterImpl: InvestimentoPresenterImpl? = null
     var mActivity: MainActivity? = null
     var mInvestmentAdapter: InvestmentAdapter? = null
-    var mLineItemList: MutableList<LineItem>? = ArrayList()
+    var mLineItemList: MutableList<LineItem> = ArrayList()
 
 
     companion object {
@@ -65,14 +65,14 @@ class InvestimentFragment : Fragment(), InvestimentoView, InvestmentAdapter.OnCl
         investimentoPresenterImpl = InvestimentoPresenterImpl(context!!, this)
         investimentoPresenterImpl?.getScreen(context!!)
 
-       // setupRecyclerView()
+        setupRecyclerView()
     }
 
     fun setupRecyclerView() {
 
         mInvestmentAdapter = InvestmentAdapter(context!!, this, mLineItemList!!)
 
-        var llm = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        val llm = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         recyclerViewInvestment.setHasFixedSize(true)
         recyclerViewInvestment.layoutManager = llm
 
@@ -95,24 +95,26 @@ class InvestimentFragment : Fragment(), InvestimentoView, InvestmentAdapter.OnCl
 
     override fun getInvestimentoSuccess(screen: Screen?) {
 
-        var screenHeader = screen
-        screenHeader?.downInfo?.clear()
-        screenHeader?.info?.clear()
+        val headerScreen = HeaderScreen(screen!!.title, screen.fundName, screen.whatIs,
+                screen.definition, screen.riskTitle, screen.risk, screen.infoTitle)
 
-        var lineItemScreenHeader = LineItem(screenHeader as Screen, true, 0, TYPE_HEADER)
-        var linItemScreenMoreInfo = LineItem(screenHeader.moreInfo, false, 0, TYPE_MORE_INFO)
-        mLineItemList?.add(lineItemScreenHeader)
-        mLineItemList?.add(linItemScreenMoreInfo)
+        val lineItemHeaderScreen = LineItem(headerScreen, true, 0, TYPE_HEADER)
+        val linItemMoreInfoScreen = LineItem(screen.moreInfo, false, 0, TYPE_MORE_INFO)
+        mLineItemList?.add(lineItemHeaderScreen)
+        mLineItemList?.add(linItemMoreInfoScreen)
 
+        screen?.info?.forEach { info ->
 
-        setupRecyclerView()
-        //screen?.info.forEach {  }
+            var lineItemInfo = LineItem(info, false, 0, TYPE_INFO)
+            mLineItemList?.add(lineItemInfo)
+        }
+        screen?.downInfo?.forEach { downInfo ->
 
-//        textViewTitle.text = screen?.title
-//        textViewInvestimentName.text = screen?.fundName
-//        textViewWhatIs.text = screen?.whatIs
-//        textViewDefinition.text = screen?.definition
-//        textViewRiskDegree.text = screen?.riskTitle
+            var lineItemInfo = LineItem(downInfo, false, 0, TYPE_DOWN_INFO)
+            mLineItemList?.add(lineItemInfo)
+        }
+
+        mInvestmentAdapter?.notifyDataSetChanged()
     }
 
     override fun getInvestimentoError(error: String?) {

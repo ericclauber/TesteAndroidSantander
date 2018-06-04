@@ -1,7 +1,7 @@
 package com.example.eric.testeandroidsantander.investimentos
 
 import com.example.eric.testeandroidsantander.base.BaseView
-import com.example.eric.testeandroidsantander.webservices.investimentos.Screen
+import com.example.eric.testeandroidsantander.webservices.investiments.Screen
 
 /**
  * Created by eric on 27/05/18.

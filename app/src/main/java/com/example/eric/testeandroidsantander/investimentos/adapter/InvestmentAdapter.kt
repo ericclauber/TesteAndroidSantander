@@ -35,6 +35,17 @@ class InvestmentAdapter(val mContext: Context,
                 view = LayoutInflater.from(parent.context)
                         .inflate(R.layout.line_item_investiment_fragment_more_info, parent, false)
             }
+            InvestimentFragment.TYPE_INFO -> {
+
+                view = LayoutInflater.from(parent.context)
+                        .inflate(R.layout.line_item_investiment_fragment_info, parent, false)
+            }
+
+            InvestimentFragment.TYPE_DOWN_INFO -> {
+
+                view = LayoutInflater.from(parent.context)
+                        .inflate(R.layout.line_item_investiment_fragment_down_info, parent, false)
+            }
         }
 
         return InvestmentHolder(mContext, view!!, mListener)

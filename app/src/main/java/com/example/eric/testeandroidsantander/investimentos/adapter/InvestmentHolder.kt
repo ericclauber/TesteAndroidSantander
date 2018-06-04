@@ -4,13 +4,13 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ImageView
-import android.widget.TextView
 import com.example.eric.testeandroidsantander.R
 import com.example.eric.testeandroidsantander.base.LineItem
 import com.example.eric.testeandroidsantander.investimentos.InvestimentFragment
 import com.example.eric.testeandroidsantander.utils.Utils
-import com.example.eric.testeandroidsantander.webservices.investimentos.MoreInfo
-import com.example.eric.testeandroidsantander.webservices.investimentos.Screen
+import com.example.eric.testeandroidsantander.webservices.investiments.*
+import kotlinx.android.synthetic.main.line_item_investiment_fragment_down_info.view.*
+import kotlinx.android.synthetic.main.line_item_investiment_fragment_info.view.*
 import kotlinx.android.synthetic.main.line_item_investiment_fragment_more_info.view.*
 import kotlinx.android.synthetic.main.line_item_investment_fragment_head.view.*
 import kotlinx.android.synthetic.main.linear_layout_risk.view.*
@@ -27,7 +27,7 @@ class InvestmentHolder(var mContext: Context, itemView: View,
 
             InvestimentFragment.TYPE_HEADER -> {
 
-                var screen = item.obj as Screen
+                val screen = item.obj as HeaderScreen
 
                 itemView.textViewTitle.text = screen.title
                 itemView.textViewInvestimentName.text = screen.fundName
@@ -44,7 +44,7 @@ class InvestmentHolder(var mContext: Context, itemView: View,
             }
             InvestimentFragment.TYPE_MORE_INFO -> {
 
-                var moreInfo = item.obj as MoreInfo
+                val moreInfo = item.obj as MoreInfo
 
                 itemView.textViewOnMonthFund.text = "${moreInfo.month.fund}%"
                 itemView.textViewOnYearFund.text = "${moreInfo.year.fund}%"
@@ -52,6 +52,19 @@ class InvestmentHolder(var mContext: Context, itemView: View,
                 itemView.textViewOnMonthCDI.text = "${moreInfo.month.cdi}%"
                 itemView.textViewOnYearCDI.text = "${moreInfo.year.cdi}%"
                 itemView.textViewOnTwelveMonthsCDI.text = "${moreInfo.twelveMonths.cdi}%"
+            }
+            InvestimentFragment.TYPE_INFO -> {
+
+                val info = item.obj as Info
+
+                itemView.textViewInfoName.text = info.name
+                itemView.textViewInfoData.text = info.name
+            }
+            InvestimentFragment.TYPE_DOWN_INFO -> {
+
+                val downInfo = item.obj as DownInfo
+
+                itemView.textViewInfoDownName.text = downInfo.name
             }
         }
     }

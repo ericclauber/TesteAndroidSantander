@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.webservices.contato
+package com.example.eric.testeandroidsantander.webservices.contact
 
 /**
  * Created by eric on 19/05/18.
