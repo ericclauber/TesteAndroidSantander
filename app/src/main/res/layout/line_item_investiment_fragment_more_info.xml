@@ -9,11 +9,9 @@
 
     <TextView
         android:id="@+id/textViewFundTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextViewMoreInfoLabels"
         android:gravity="right"
         android:text="@string/more_info_fund_title_investiment"
-        android:textColor="@color/textColorGray2"
         app:layout_constraintEnd_toStartOf="@+id/textViewCDITitle"
         app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,11 +19,9 @@
 
     <TextView
         android:id="@+id/textViewCDITitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/TextViewMoreInfoLabels"
         android:gravity="right"
         android:text="@string/more_info_cdi_title_investiment"
-        android:textColor="@color/textColorGray2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -55,7 +51,7 @@
         style="@style/TextViewMoreInfoValues"
         android:text="0.1%"
         app:layout_constraintEnd_toStartOf="@+id/textViewOnMonthCDI"
-        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintHorizontal_bias="0.742"
         app:layout_constraintStart_toEndOf="@+id/textViewOnMonth"
         app:layout_constraintTop_toBottomOf="@+id/textViewFundTitle" />
 
@@ -64,16 +60,16 @@
         style="@style/TextViewMoreInfoValues"
         android:text="13.00%"
         app:layout_constraintEnd_toStartOf="@+id/textViewOnYearCDI"
-        app:layout_constraintHorizontal_bias="0.735"
+        app:layout_constraintHorizontal_bias="0.747"
         app:layout_constraintStart_toEndOf="@+id/textViewOnYear"
         app:layout_constraintTop_toBottomOf="@+id/textViewOnMonthFund" />
 
     <TextView
         android:id="@+id/textViewOnTwelveMonthsFund"
         style="@style/TextViewMoreInfoValues"
-        android:text="10.9%"
+        android:text="17.9%"
         app:layout_constraintEnd_toStartOf="@+id/textViewOnTwelveMonthsCDI"
-        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintHorizontal_bias="0.727"
         app:layout_constraintStart_toEndOf="@+id/textViewOnTwelveMonths"
         app:layout_constraintTop_toBottomOf="@+id/textViewOnYearFund" />
 
@@ -94,6 +90,7 @@
     <TextView
         android:id="@+id/textViewOnTwelveMonthsCDI"
         style="@style/TextViewMoreInfoValues"
+        android:layout_marginTop="16dp"
         android:text="12.6%"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewOnYearCDI" />

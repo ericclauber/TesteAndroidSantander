@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.investimentos.adapter
+package com.example.eric.testeandroidsantander.investiments.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.ImageView
 import com.example.eric.testeandroidsantander.R
 import com.example.eric.testeandroidsantander.base.LineItem
-import com.example.eric.testeandroidsantander.investimentos.InvestimentFragment
+import com.example.eric.testeandroidsantander.investiments.InvestimentFragment
 import com.example.eric.testeandroidsantander.utils.Utils
 import com.example.eric.testeandroidsantander.webservices.investiments.*
 import kotlinx.android.synthetic.main.line_item_investiment_fragment_down_info.view.*
@@ -40,7 +40,7 @@ class InvestmentHolder(var mContext: Context, itemView: View,
                         .setImageResource(R.drawable.baseline_keyboard_arrow_down_black_24)
 
                 itemView.linearLayoutRiskView.getChildAt(screen.risk - 1)
-                        .layoutParams.height = Utils.dpToPixel(mContext, 14)
+                        .layoutParams.height = Utils.dpToPixel(mContext, 12)
             }
             InvestimentFragment.TYPE_MORE_INFO -> {
 

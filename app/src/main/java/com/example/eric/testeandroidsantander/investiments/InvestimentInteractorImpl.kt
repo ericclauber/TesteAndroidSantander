@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.investimentos
+package com.example.eric.testeandroidsantander.investiments
 
 import android.content.Context
 import com.android.volley.Response
@@ -12,7 +12,7 @@ import com.example.eric.testeandroidsantander.webservices.investiments.Screen
  * Created by eric on 27/05/18.
  */
 class InvestimentoInteractorImpl : InvestimentoInteractor {
-    override fun geScreen(context: Context, onInvestimentoListener: OnInvestimentoListener) {
+    override fun geScreen(context: Context, onInvestimentoListener: OnInvestimentListener) {
 
         val stringRequest = StringRequest(Constants.URL_FUND, Response.Listener<String> {
 
@@ -33,5 +33,5 @@ class InvestimentoInteractorImpl : InvestimentoInteractor {
 
 interface InvestimentoInteractor {
 
-    fun geScreen(context: Context, onInvestimentoListener: OnInvestimentoListener)
+    fun geScreen(context: Context, onInvestimentoListener: OnInvestimentListener)
 }

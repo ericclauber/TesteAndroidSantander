@@ -66,6 +66,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
         <item name="android:textColor">@color/textColorGray2</item>
+        <item name="android:fontFamily">@font/din_pro_light</item>
     </style>
 
     <style name="TextViewMoreInfoValues" parent="Theme.AppCompat">
@@ -73,8 +74,9 @@
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:gravity">right</item>
+        <item name="android:gravity">right|bottom</item>
         <item name="android:textColor">@color/colorBlack</item>
+        <item name="android:fontFamily">@font/din_mittel_schrift_std</item>
     </style>
 
     <style name="TextViewWhatIsDegreeMoreInfo" parent="Theme.AppCompat">

@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.investimentos.adapter
+package com.example.eric.testeandroidsantander.investiments.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.eric.testeandroidsantander.R
 import com.example.eric.testeandroidsantander.base.LineItem
-import com.example.eric.testeandroidsantander.investimentos.InvestimentFragment
+import com.example.eric.testeandroidsantander.investiments.InvestimentFragment
 
 /**
  * Created by eric on 03/06/18.

@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.investimentos
+package com.example.eric.testeandroidsantander.investiments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
@@ -10,7 +10,7 @@ import com.example.eric.testeandroidsantander.MainActivity
 import com.example.eric.testeandroidsantander.R
 import com.example.eric.testeandroidsantander.base.BaseView
 import com.example.eric.testeandroidsantander.base.LineItem
-import com.example.eric.testeandroidsantander.investimentos.adapter.InvestmentAdapter
+import com.example.eric.testeandroidsantander.investiments.adapter.InvestmentAdapter
 import com.example.eric.testeandroidsantander.webservices.investiments.HeaderScreen
 import com.example.eric.testeandroidsantander.webservices.investiments.Screen
 import kotlinx.android.synthetic.main.fragment_investiment.*
@@ -18,7 +18,7 @@ import kotlinx.android.synthetic.main.fragment_investiment.*
 /**
  * Created by eric on 27/05/18.
  */
-class InvestimentFragment : Fragment(), InvestimentoView, InvestmentAdapter.OnClickListener {
+class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnClickListener {
 
     var investimentoPresenterImpl: InvestimentoPresenterImpl? = null
     var mActivity: MainActivity? = null

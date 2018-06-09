@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.investimentos
+package com.example.eric.testeandroidsantander.investiments
 
 import android.content.Context
 import com.example.eric.testeandroidsantander.base.BaseActivity
@@ -9,13 +9,13 @@ import kotlin.properties.Delegates
 /**
  * Created by eric on 27/05/18.
  */
-class InvestimentoPresenterImpl : InvestimentoPresenter, OnInvestimentoListener {
+class InvestimentoPresenterImpl : InvestimentoPresenter, OnInvestimentListener {
 
     var context: Context by Delegates.notNull()
-    var view: InvestimentoView by Delegates.notNull()
+    var view: InvestimentView by Delegates.notNull()
     var investimentoInteractorImpl: InvestimentoInteractorImpl by Delegates.notNull()
 
-    constructor(context: Context, view: InvestimentoView) {
+    constructor(context: Context, view: InvestimentView) {
 
         this.context = context
         this.view = view
