@@ -6,38 +6,15 @@
     android:layout_height="wrap_content">
 
     <TextView
-
-        android:id="@+id/textViewLabelInvestimento"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Investimento"
-        android:fontFamily="@font/din_eng_schrift_std"
-        android:textColor="@color/colorBlack"
-        app:layout_constraintEnd_toStartOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:src="@drawable/ripple_button_send"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="0dp"
-        android:layout_height="13dp"
-        android:layout_marginTop="26dp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        style="@style/TextViewWhatIsDegreeMoreInfo"
+        android:textSize="14sp"
         android:text="Fundos de..."
-        android:textColor="@color/colorBlack"
-        android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLabelInvestimento" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textViewInvestimentName"
@@ -46,6 +23,8 @@
         android:gravity="center"
         android:text="Vince Valorem"
         android:textColor="@color/colorBlack"
+        android:fontFamily="@font/din_pro_medium"
+        android:layout_marginTop="8dp"
         android:textSize="28dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -56,7 +35,7 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="1dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="20dp"
         android:background="@color/textColorGray1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,10 +46,9 @@
         android:id="@+id/textViewWhatIs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:gravity="center"
-        android:text="O que é?"
-        android:textColor="@color/colorBlack"
+        android:layout_marginTop="20dp"
+        style="@style/TextViewWhatIsDegreeMoreInfo"
+        android:text="O que é"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -84,7 +62,9 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="O Fundo tem por objetivo text text text text text text text text text text text textO Fundo tem por objdddddddetivo text text text text text text text text text text text text"
-        android:textColor="@color/colorBlack"
+        android:textColor="@color/colorBlackPercent70"
+        android:fontFamily="@font/din_pro_light"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,9 +76,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:gravity="center"
+        style="@style/TextViewWhatIsDegreeMoreInfo"
         android:text="Grau de risco"
-        android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -119,9 +98,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:text="Mais informaçeõs..."
-        android:textColor="@color/textColorGray2"
+        android:text="Mais informações..."
+        style="@style/TextViewWhatIsDegreeMoreInfo"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"

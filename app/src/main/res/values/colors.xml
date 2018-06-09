@@ -13,7 +13,8 @@
     <color name="textColorButtons">@color/colorWhite</color>
     <color name="textColorGray1">#DCD8D8</color>
     <color name="textColorGray2">#AAA7A7</color>
-
+    <color name="colorBlackPercent90">#90000000</color>
+    <color name="colorBlackPercent70">#70000000</color>
     // General
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlack">#000000</color>

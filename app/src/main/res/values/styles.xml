@@ -77,4 +77,12 @@
         <item name="android:textColor">@color/colorBlack</item>
     </style>
 
+    <style name="TextViewWhatIsDegreeMoreInfo" parent="Theme.AppCompat">
+
+        <item name="android:gravity">center</item>
+        <item name="android:fontFamily">@font/din_pro_medium</item>
+        <item name="android:textColor">@color/colorBlackPercent90</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>
