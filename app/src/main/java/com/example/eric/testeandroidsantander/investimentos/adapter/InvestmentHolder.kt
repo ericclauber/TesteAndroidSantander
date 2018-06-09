@@ -12,7 +12,7 @@ import com.example.eric.testeandroidsantander.webservices.investiments.*
 import kotlinx.android.synthetic.main.line_item_investiment_fragment_down_info.view.*
 import kotlinx.android.synthetic.main.line_item_investiment_fragment_info.view.*
 import kotlinx.android.synthetic.main.line_item_investiment_fragment_more_info.view.*
-import kotlinx.android.synthetic.main.line_item_investment_fragment_head.view.*
+import kotlinx.android.synthetic.main.line_item_investment_fragment_header.view.*
 import kotlinx.android.synthetic.main.linear_layout_risk.view.*
 
 /**
@@ -58,7 +58,7 @@ class InvestmentHolder(var mContext: Context, itemView: View,
                 val info = item.obj as Info
 
                 itemView.textViewInfoName.text = info.name
-                itemView.textViewInfoData.text = info.name
+                itemView.textViewInfoData.text = info.data
             }
             InvestimentFragment.TYPE_DOWN_INFO -> {
 

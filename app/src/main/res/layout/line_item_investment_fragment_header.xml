@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="Investimento"
+        android:fontFamily="@font/din_eng_schrift_std"
         android:textColor="@color/colorBlack"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"

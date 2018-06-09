@@ -4,6 +4,7 @@ import android.content.Context
 import com.google.gson.Gson
 import org.json.JSONException
 import org.json.JSONObject
+import java.nio.charset.Charset
 
 /**
  * Created by eric on 19/05/18.
@@ -14,8 +15,10 @@ object Utils {
 
         val list: MutableList<Any> = ArrayList()
 
+        val string = String(jsonString.toByteArray(Charsets.ISO_8859_1))
+
         try {
-            val jsonObject = JSONObject(jsonString)
+            val jsonObject = JSONObject(string)
             val objectArray = jsonObject.getJSONArray(param)
             val gson = Gson()
 
@@ -35,8 +38,10 @@ object Utils {
 
         var any: Any? = null
 
+        val string = String(jsonString.toByteArray(Charsets.ISO_8859_1))
+
         try {
-            val jsonObject = JSONObject(jsonString)
+            val jsonObject = JSONObject(string)
             val gson = Gson()
 
             any = gson.fromJson(jsonObject.getString(param), clazz)

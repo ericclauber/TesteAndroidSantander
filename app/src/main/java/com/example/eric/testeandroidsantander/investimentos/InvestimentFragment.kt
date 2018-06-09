@@ -13,7 +13,7 @@ import com.example.eric.testeandroidsantander.base.LineItem
 import com.example.eric.testeandroidsantander.investimentos.adapter.InvestmentAdapter
 import com.example.eric.testeandroidsantander.webservices.investiments.HeaderScreen
 import com.example.eric.testeandroidsantander.webservices.investiments.Screen
-import kotlinx.android.synthetic.main.fragment_investimento.*
+import kotlinx.android.synthetic.main.fragment_investiment.*
 
 /**
  * Created by eric on 27/05/18.
@@ -42,7 +42,7 @@ class InvestimentFragment : Fragment(), InvestimentoView, InvestmentAdapter.OnCl
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
-        val rooView = inflater.inflate(R.layout.fragment_investimento, container, false)
+        val rooView = inflater.inflate(R.layout.fragment_investiment, container, false)
         return rooView
     }
 

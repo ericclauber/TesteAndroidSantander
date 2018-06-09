@@ -33,7 +33,7 @@ class ContatoFragment : Fragment(), ContatoView {
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val rootView = inflater.inflate(R.layout.fragment_contato, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_contact, container, false)
 
         return rootView
     }
