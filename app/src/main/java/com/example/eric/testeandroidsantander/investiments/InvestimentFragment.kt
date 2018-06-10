@@ -56,8 +56,6 @@ class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnCli
     fun initUI() {
 
         mActivity = (activity as MainActivity)
-
-//        viewRisk4.layoutParams.height = dpToPixel(12)
     }
 
     fun initData() {

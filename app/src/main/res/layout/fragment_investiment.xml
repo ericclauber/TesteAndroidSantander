@@ -20,10 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewUpload"
         android:layout_width="20dp"
         android:layout_height="20dp"
         android:src="@drawable/upload"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -45,6 +46,7 @@
         android:id="@+id/buttonInvest"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/background_button_contact_investment"
         android:text="@string/button_invest_on_investment"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"

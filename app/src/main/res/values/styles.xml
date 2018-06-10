@@ -27,6 +27,7 @@
         <item name="android:layout_marginBottom">30dp</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
+        <item name="android:animateLayoutChanges">true</item>
     </style>
 
     <style name="CheckBoxCustomTheme" parent="Theme.AppCompat.Light.DarkActionBar">

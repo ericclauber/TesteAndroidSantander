@@ -2,10 +2,12 @@ package com.example.eric.testeandroidsantander.base
 
 import android.app.AlertDialog
 import android.app.ProgressDialog
+import android.os.Looper
 import android.support.v4.app.Fragment
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.example.eric.testeandroidsantander.R
+import java.util.*
 
 /**
  * Created by eric on 19/05/18.
@@ -50,6 +52,22 @@ open class BaseActivity : AppCompatActivity() {
     fun showToast(message: String?) {
 
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
+    }
+
+    fun delayFake(message: String){
+
+        Looper.prepare()
+        onLoadingStart()
+
+        val timer = Timer()
+        timer.schedule(object : TimerTask() {
+
+            override fun run() {
+
+                onLoadingFinish()
+                showToast(message)
+            }
+        }, 3000)
     }
 
     override fun onBackPressed() {}
