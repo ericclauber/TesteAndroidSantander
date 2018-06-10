@@ -34,7 +34,7 @@
         android:layout_height="0dp"
         android:layout_marginBottom="26dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonInvest"
+        app:layout_constraintBottom_toTopOf="@+id/investButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewLabelInvestimento"
@@ -43,7 +43,7 @@
     </android.support.v7.widget.RecyclerView>
 
     <Button
-        android:id="@+id/buttonInvest"
+        android:id="@+id/investButton"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/background_button_contact_investment"

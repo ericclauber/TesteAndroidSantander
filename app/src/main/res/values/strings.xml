@@ -11,5 +11,8 @@
     <string name="more_info_on_month_investiment">No mês</string>
     <string name="more_info_on_year_investiment">No Ano</string>
     <string name="more_info_on_twelve_months_investiment">12 meses</string>
+    <string name="download_item_down_info_investiment">Download efetuado</string>
+    <string name="upload_button_investiment">Upload efetuado</string>
+    <string name="invest_button_investiment">Investimento efetuado</string>
 
 </resources>

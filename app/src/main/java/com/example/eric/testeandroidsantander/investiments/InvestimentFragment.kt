@@ -18,7 +18,8 @@ import kotlinx.android.synthetic.main.fragment_investiment.*
 /**
  * Created by eric on 27/05/18.
  */
-class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnClickListener {
+class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnClickListener,
+        View.OnClickListener {
 
     var investimentoPresenterImpl: InvestimentoPresenterImpl? = null
     var mActivity: MainActivity? = null
@@ -56,6 +57,8 @@ class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnCli
     fun initUI() {
 
         mActivity = (activity as MainActivity)
+        imageViewUpload.setOnClickListener(this)
+        investButton.setOnClickListener(this)
     }
 
     fun initData() {
@@ -75,6 +78,26 @@ class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnCli
         recyclerViewInvestment.layoutManager = llm
 
         recyclerViewInvestment.adapter = mInvestmentAdapter
+    }
+
+    override fun onClick(v: View?) {
+
+        when (v?.id) {
+
+            imageViewUpload.id -> {
+
+                mActivity?.showToast(resources.getString(R.string.upload_button_investiment))
+            }
+            investButton.id -> {
+
+                mActivity?.showToast(resources.getString(R.string.invest_button_investiment))
+            }
+        }
+    }
+
+    override fun onClickItem() {
+
+        mActivity?.showToast(resources.getString(R.string.download_item_down_info_investiment))
     }
 
     override fun showProgress(type: BaseView.ProgressType) {
@@ -118,9 +141,5 @@ class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnCli
     override fun getInvestimentoError(error: String?) {
 
         mActivity?.showToast("${getString(R.string.url_error)}\n$error")
-    }
-
-    override fun onClickItem() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

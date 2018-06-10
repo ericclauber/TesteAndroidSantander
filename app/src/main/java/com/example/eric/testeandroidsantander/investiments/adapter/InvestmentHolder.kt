@@ -65,6 +65,7 @@ class InvestmentHolder(var mContext: Context, itemView: View,
                 val downInfo = item.obj as DownInfo
 
                 itemView.textViewInfoDownName.text = downInfo.name
+                itemView.imageViewArrowDown.setOnClickListener { mListener.onClickItem() }
             }
         }
     }
