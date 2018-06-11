@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.contato
+package com.example.eric.testeandroidsantander.contact
 
 import android.content.Context
 import com.example.eric.testeandroidsantander.base.BaseActivity
@@ -12,10 +12,10 @@ import kotlin.properties.Delegates
 class ContatoPresenterImpl : ContatoPresenter, OnContactListener {
 
     var context: Context by Delegates.notNull()
-    var view: ContatoView by Delegates.notNull()
+    var view: ContactView by Delegates.notNull()
     var contatoInteractorImpl: ContatoInteractorImpl by Delegates.notNull()
 
-    constructor(context: Context, view: ContatoView) {
+    constructor(context: Context, view: ContactView) {
 
         this.context = context
         this.view = view

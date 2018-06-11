@@ -1,4 +1,4 @@
-package com.example.eric.testeandroidsantander.contato
+package com.example.eric.testeandroidsantander.contact
 
 import android.content.Context
 import com.android.volley.Response
