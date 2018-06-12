@@ -19,9 +19,9 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
     fun initUI() {
 
-        button_contato.setOnClickListener(this)
-        button_contato.performClick()
-        button_investimento.setOnClickListener(this)
+        contactButton.setOnClickListener(this)
+        investmentButton.setOnClickListener(this)
+        investmentButton.performClick()
     }
 
     fun initData() {}
@@ -30,13 +30,13 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
         when (v?.id) {
 
-            R.id.button_investimento -> {
+            investmentButton.id -> {
 
                 val fragmentInvestimento = InvestimentFragment.getInstance()
                 addFragment(fragmentInvestimento)
                 configButtons(TypeButton.TYPE_INVESTIMENTO)
             }
-            R.id.button_contato -> {
+            contactButton.id -> {
 
                 val fragmentContato = ContactFragment.getInstance()
                 addFragment(fragmentContato)
@@ -51,15 +51,15 @@ class MainActivity : BaseActivity(), View.OnClickListener {
 
             TypeButton.TYPE_CONTATO -> {
 
-                button_contato.isActivated = true
-                button_investimento.isActivated = false
+                contactButton.isActivated = true
+                investmentButton.isActivated = false
                 view_investimento.visibility = View.INVISIBLE
                 view_contato.visibility = View.VISIBLE
             }
             TypeButton.TYPE_INVESTIMENTO -> {
 
-                button_investimento.isActivated = true
-                button_contato.isActivated = false
+                investmentButton.isActivated = true
+                contactButton.isActivated = false
                 view_contato.visibility = View.INVISIBLE
                 view_investimento.visibility = View.VISIBLE
             }

@@ -29,9 +29,23 @@ android {
             buildConfigField("String", "URL_CELLS",'"https://floating-mountain-50292.herokuapp.com/cells.json"')
             buildConfigField("String", "URL_FUND",'"https://floating-mountain-50292.herokuapp.com/fund.json"')
             resValue("string","app_name","TesteAndroid Debug")
+
+            android.applicationVariants.all { variant ->
+
+                variant.outputs.all { output ->
+                    def finalVersionCode = versionCode
+                    output.versionCodeOverride = finalVersionCode
+                    def newName = "app-teste-debug"
+                    outputFileName = new File(
+                            output.outputFile.parent,
+                            outputFileName.replace("app-debug", "$newName-v${finalVersionCode}"))
+                }
+            }
         }
     }
 }
+
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

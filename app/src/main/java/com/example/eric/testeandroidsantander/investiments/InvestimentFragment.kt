@@ -111,7 +111,7 @@ class InvestimentFragment : Fragment(), InvestimentView, InvestmentAdapter.OnCli
     }
 
     override fun onConnectionFailed() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        //TODO
     }
 
     override fun getInvestimentoSuccess(screen: Screen?) {
