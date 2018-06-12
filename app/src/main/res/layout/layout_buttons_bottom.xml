@@ -9,7 +9,7 @@
         android:id="@+id/view_investimento"
         android:layout_width="0dp"
         android:layout_height="2dp"
-        android:background="@color/colorButtonSelected"
+        android:background="@color/colorButtonNormal"
         app:layout_constraintBottom_toTopOf="@+id/investmentButton"
         app:layout_constraintEnd_toStartOf="@+id/view_contato"
         app:layout_constraintStart_toStartOf="parent" />
@@ -26,7 +26,7 @@
         android:id="@+id/view_contato"
         android:layout_width="0dp"
         android:layout_height="2dp"
-        android:background="@color/colorButtonSelected"
+        android:background="@color/colorButtonNormal"
         app:layout_constraintBottom_toTopOf="@+id/contactButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/view_investimento" />
